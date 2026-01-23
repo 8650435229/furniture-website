@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <title>Document</title>
+    <!--
+      ===============================================
+         GLOBAL STYLE-SHEET
+      ===============================================
+    -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!--
+    ===================================================================
+       PRIMARY HEADER
+       TOP NAVIGATION BAR
+       Hamburger Menu, Logo, Sign-in & Cart
+    ===================================================================
+  -->
+<header class="primary-header">
+  <nav class="primary-nav">
+    <div class="nav-left">
+      <button class="hamburger-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <!-- MAIN NAV LINKS -->
+      <div class="nav-links">
+        <ul class="nav-list" role="navigation" aria-label="primary navigation">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/products" class="nav-link">Products</a></li>
+          <li><a href="/services" class="nav-link">Services</a></li>
+          <li><a href="/about" class="nav-link">About</a></li>
+          <li><a href="/contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <a href="/" class="nav-logo" aria-label="Home-page">abdulWajid</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="/signin" class="signin-link">
+        <span class="signin-text">Sign in</span>
+
+        <svg class="arrow-icon" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M8 5l8 7-8 7" fill="none" stroke="currentColor" stroke-width="2" />
+        </svg>
+
+        <svg class="profile-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+        <path d="M4 20c0-4 4-6 8-6s8 2 8 6" fill="none" stroke="currentColor" stroke-width="2" />
+        </svg>
+      </a>
+      
+      <a href="/cart" class="cart-link" aria-label="View cart">
+        <!-- Cart icon -->
+        <svg
+            class="cart-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M3 4h2l2.2 10.4a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L21 7H6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="19" r="1.5" />
+            <circle cx="17" cy="19" r="1.5" />
+        </svg>
+        <!-- Cart count -->
+         <span class="cart-count" aria-live="polite">0</span>
+        </a>
+    </div>
+    <!-- Nav Search bar row -->
+     <div class="nav-search">
+      <form class="search-form" role="search" aria-label="site search">
+        <input type="search" class="search-input" placeholder="Search abdulWajid.in" aria-label="Search products" />
+        <!-- Clear-icon using SVG -->
+         <button type="button" class="clear-btn" aria-label="clear search" hidden>
+          <svg class="clear-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+         </button>
+         <!-- .search-btn -->
+        <button type="submit" class="search-btn" aria-label="Search">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"  focusable="false">
+            <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2" />
+            <line x1="16.65" y1="16.65" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </form>
+     </div>
+     <!-- Nav Categories row -->
+      <div class="nav-categories">
+        <span class="shopby-label">Shop By</span>
+        <ul class="category-list" role="navigation" aria-label="secondary navigation">
+          <li>
+            <a href="/categories" class="category-link">Category</a>
+          </li>
+          <li>
+            <a href="/deals" class="category-link">Deals</a>
+          </li>
+          <li>
+            <a href="/sell" class="category-link">Sell</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+</header>
+<!--
+  ================================================================================= 
+  Delivery location section: shows current delivery pin code and allows users to
+  update their location for accurate availability, pricing, and delivery estimates
+  ================================================================================= 
+ -->
+<section class="delivery-bar" aria-label="Delivery location">
+  <button class="delivery-btn" type="button">
+    <!-- Pin drop icon -->
+     <svg class="location-icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path
+        d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5
+           c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5
+           s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"
+           fill="currentColor"/>
+     </svg>
+     <span class="delivery-text">Delivering to <strong>Moradabad 244001</strong> - Update location</span>
+     <!-- Down arrow icon -->
+      <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+  </button>
+</section>
+
+    <!--
+    =====================
+        HEADER HERO
+    =====================
+    -->
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Discover the Latest Trends</h1>
+        <p>Shop the best products, handpicked just for you.</p>
+        <a href="#product" class="btn-primary">Shop Now</a>
+      </div>
+    </header>
+     <!--
+    =====================
+      SECTION PRODUCTS
+    =====================
+    -->
+     <section class="product" id="product">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">
+          <img src="images/lantern.jpg" alt="product 1">
+          </div>
+          <h3>Steel Lantern</h3>
+          <p class="price">$49.99</p>
+          <button class="btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+          <img src="images/brassLantern.jpg" alt="product 2">
+          </div>
+          <h3>Brass Lantern</h3>
+          <p class="price">$59.99</p>
+          <button class="btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+          <img src="images/coupleLantern.jpg" alt="product 3">
+          </div>
+          <h3>Couple Lantern</h3>
+          <p class="price">$79.99</p>
+          <button class="btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+          <img src="images/netLantern.jpg" alt="product 4">
+          </div>
+          <h3>Net Lantern</h3>
+          <p class="price">$89.99</p>
+          <button class="btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+          <img src="images/squareBrassLantern.jpg" alt="product 5">
+          </div>
+          <h3>Square brass Lantern</h3>
+          <p class="price">$49.99</p>
+          <button class="btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+          <img src="images/woodenLantern.jpg" alt="product 6">
+          </div>
+          <h3>Wooden Lantern</h3>
+          <p class="price">$59.99</p>
+          <button class="btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+          <img src="images/fairylightLantern.jpg" alt="product 7">
+          </div>
+          <h3>Fairy lights Lantern</h3>
+          <p class="price">$79.99</p>
+          <button class="btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+          <img src="images/antiqueLantern.jpg" alt="product 8">
+          </div>
+          <h3>Antique Lantern</h3>
+          <p class="price">$89.99</p>
+          <button class="btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+          <img src="images/glassJarLantern.jpg" alt="product 9">
+          </div>
+          <h3>Glass Jar Lantern</h3>
+          <p class="price">$49.99</p>
+          <button class="btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+          <img src="images/roundAntiqueLantern.jpg" alt="product 10">
+          </div>
+          <h3>Round Antique Lantern</h3>
+          <p class="price">$59.99</p>
+          <button class="btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+          <img src="images/copperBathTub.jpg" alt="product 11">
+          </div>
+          <h3>Copper Bath Tub</h3>
+          <p class="price">$79.99</p>
+          <button class="btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+          <img src="images/wallArt.jpg" alt="product 12">
+          </div>
+          <h3>Wall Art</h3>
+          <p class="price">$89.99</p>
+          <button class="btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+          <img src="images/woodenCandelStand.jpg" alt="product 13">
+          </div>
+          <h3>Wooden Candel Stand</h3>
+          <p class="price">$49.99</p>
+          <button class="btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+          <img src="images/woodenRollingPinWithStand.jpg" alt="product 14">
+          </div>
+          <h3>Wooden Rolling Pin With Stand</h3>
+          <p class="price">$59.99</p>
+          <button class="btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+          <img src="images/fairylightLantern.jpg" alt="product 15">
+          </div>
+          <h3>Fairy lights Lantern</h3>
+          <p class="price">$79.99</p>
+          <button class="btn-secondary">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+          <img src="images/antiqueLantern.jpg" alt="product 16">
+          </div>
+          <h3>Antique Lantern</h3>
+          <p class="price">$89.99</p>
+          <button class="btn-secondary">Add to Cart</button>
+        </div>
+      </div>
+     </section>
+     <!-- =============================
+          TESTIMONIALS / REVIEWS 
+          =============================
+     -->
+        <section class="testimonials">
+          <h2>What Our Customers Say</h2>
+          <!-- Instruction for mobile users -->
+           <p class="swipe-instruction">&larr; Swipe to see more reviews &rarr;</p>
+            <div class="testimonial-slider" id="testimonial-slider">
+                <!-- Slide 1 -->
+               <div class="testimonial-card">
+                <img src="images/abdulWajid.jpg" class="customer-photo" alt="cutomer 1">
+                <p class="review">&ldquo;Amazing product quality, exactly as shown in the pictures.&rdquo;</p>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <h4 class="customer-name">- Abdul Wajid</h4>
+               </div>
+               <!-- Slide 2 -->
+                <div class="testimonial-card">
+                  <img src="images/user2.jpg" class="customer-photo" alt="cutomer 2">
+                  <p class="review">&ldquo;Fast delivery and the packaging was excellent. Highly recommended!&rdquo;</p>
+                  <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                  <h4 class="customer-name">- Mohd Azeem</h4>
+                </div>
+                <!-- Slide 3 -->
+                 <div class="testimonial-card">
+                  <img src="images/abdulWajid.jpg" class="customer-photo" alt="cutomer 3">
+                  <p class="review">&ldquo;Totally worth the price. I'm definitely coming back for more.&rdquo;</p>
+                  <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                  <h4 class="customer-name">- Hamid Ali</h4>
+                 </div>
+            </div>
+            <!-- Pagination Dots (Now visible on both mobile and desktop) -->
+             <div class="pagination-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+             </div>
+            <!-- Navigation -->
+             <div class="testimonial-controls">
+                <button class="testimonial-btn prev" id="prevBtn">&#10094;</button>
+                <button class="testimonial-btn next" id="nextBtn">&#10095;</button>
+             </div>
+        </section>
+     <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
