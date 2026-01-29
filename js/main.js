@@ -13,11 +13,31 @@ document.addEventListener("DOMContentLoaded", () => {
   const productSection = document.getElementById("product");
   const searchInput = document.querySelector(".search-input");
   const clearBtn = document.querySelector(".clear-btn");
+  const drawerHeader = document.querySelector(".drawer-header");
+  const signInLink = document.querySelector(".signin-link");
+  const navRight = document.querySelector(".nav-right");
 
-  /***************************
-   * 2. GUARDS / VALIDATION
-   ***************************/
-  if (!searchInput || !clearBtn) return;
+
+  /*************************
+  * SEARCH FEATURE
+   *************************/
+if (searchInput && clearBtn) {
+
+  function toggleClearBtn() {
+    clearBtn.hidden = searchInput.value.trim() === "";
+  }
+
+  // Listen for typing, paste, autofill, etc.
+  searchInput.addEventListener("input", toggleClearBtn);
+
+  // Clear input on button click
+  clearBtn.addEventListener("click", () => {
+    searchInput.value = "";
+    searchInput.focus();
+    clearBtn.hidden = true;
+  });
+}
+
 
   /*************************
    * 4. DATA
@@ -48,6 +68,14 @@ function closeMenu() {
     header.classList.remove('menu-open');
     document.body.style.overflow = '';
   }
+
+
+// Clone the existing Sign-In link and place it inside the mobile drawer header (only once)
+if (drawerHeader && signInLink && !drawerHeader.querySelector(".drawer-signin")) {
+  const clonedSignIn = signInLink.cloneNode(true); // deep clone
+  clonedSignIn.classList.add("drawer-signin");     // optional hook
+  drawerHeader.appendChild(clonedSignIn);
+}
 
 
   /*************************
@@ -134,17 +162,5 @@ if (shopNowBtn && productSection) {
   }
 
 
-function toggleClearBtn() {
-  clearBtn.hidden = searchInput.value.trim() === "";
-}
 
-// Listen for typing, paste, autofill, etc.
-searchInput.addEventListener("input", toggleClearBtn);
-
-// Clear input on button click
-clearBtn.addEventListener("click", () => {
-  searchInput.value = "";
-  searchInput.focus();
-  clearBtn.hidden = true;
-});
 }); // ← end DOMContentLoaded

@@ -150,19 +150,19 @@ body {
 }
 
 .hamburger-button.is-active .bar:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  transform: translateY(6.5px) rotate(45deg);
 }
 .hamburger-button.is-active .bar:nth-child(2) {
   opacity: 0;
 }
 .hamburger-button.is-active .bar:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-6.5px) rotate(-45deg);
 }
 /* When the mobile drawer menu is open, fix the hamburger button and shift it to the right edge of the drawer */
 .primary-header.menu-open .hamburger-button {
   position: fixed;
   top: 5rem;
-  left: calc(75vw - 0rem);
+  left: calc(75vw - -1rem);
   z-index: 1100;
 }
 
@@ -172,10 +172,10 @@ body {
   top: 0;
   left: 0;
   width: 75vw;
-  max-width: 320px;
+  max-width: 314.88px;
   height: 100vh;
-  background: #0b141a;
-  padding: 4rem 1.5rem 1.5rem;
+  background: #ffffff;
+  color: #111111;
   transform: translateX(-100%);
   transition: transform 0.35s ease;
   z-index: 1000;
@@ -186,6 +186,30 @@ body {
 .nav-links.is-active {
   transform: translateX(0);
 }
+/* -- Drawer header (slides with menu) -- */
+.drawer-header {
+  background: #232f3e;
+  color: #ffffff;
+  height: 128px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+.drawer-header .signin-link {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+}
+.drawer-header .drawer-signin .arrow-icon {
+  display: none;
+}
+
+
 .nav-list {
   list-style: none;
   margin: 0;
