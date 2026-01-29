@@ -438,7 +438,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('/images/UI-Design.jpg') center/cover no-repeat;
+  background: url('../images/UI-Design.jpg') center/cover no-repeat;
   color: white;
   position: relative;
 }
